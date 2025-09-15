@@ -7,6 +7,7 @@ This project also aims to provide a configuration that allows all the components
 - [JDK 21.0.2](https://jdk.java.net/21/)
 - [Maven 3](https://maven.apache.org)
 - [Docker Desktop](https://docs.docker.com/get-started/overview/)
+- [Node.js v20.12.2(LTS)](https://nodejs.org/en/download)
 
 
 ## Steps to build the Docker images needed for this project
@@ -17,7 +18,7 @@ This project also aims to provide a configuration that allows all the components
 ## Running the containerized project
 
 - After building the Docker images, the project can be started using the following file: ``./docker/docker-compose.yaml``
-- Create the containers using the following command line executed from the ``./docker`` folder: ``docker-compose up -d``
+- Create the containers using the following command line executed from the ``./exploitation`` folder: ``docker-compose up -d``
 - A Keycloak admin interface is accessible at http://localhost:8080
 - Access the PostgreSQL database using the following command: ``psql --username=pocdb  --dbname=pocdb``
 - You can initialize ``t_poc_vhl_vehicle`` table with ``./docker/data/t_poc_vhl_vehicle.csv`` content: ``\COPY poc.t_poc_vhl_vehicle from '/absolute/path/t_poc_vhl_vehicle.csv' with (null 'NULL', format CSV, ENCODING 'UTF-8');``
