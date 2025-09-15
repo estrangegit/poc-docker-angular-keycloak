@@ -1,0 +1,40 @@
+.login-pf body {
+    background: none;
+}
+
+#kc-header-wrapper {
+    color: white;
+}
+
+.card-pf {
+    box-shadow: none;
+    border: 1px solid var(--pf-global--palette--black-200);
+    border-radius: 10px;
+    background-color: var(--pf-global--palette--blue-50);
+}
+
+h1#kc-page-title {
+    font-family: "inter var", sans-serif
+    font-weight: var(--pf-global--FontWeight--normal)
+}
+
+#username {
+    border-radius: 3px;
+}
+
+#password {
+    border-radius: 3px;
+}
+
+.pf-c-button pf-m-control {
+    border-radius: 3px;
+}
+
+#kc-login {
+    background-color: var(--pf-global--palette--blue-300);
+    border-radius: 3px;
+}
+
+input:focus-visible {
+    outline: var(--pf-global--active-color--300) solid 1px;
+}

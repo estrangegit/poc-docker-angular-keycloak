@@ -1,0 +1,36 @@
+<div class="grid h-full">
+    <div class="col-3">
+        <app-vehicles-filter></app-vehicles-filter>
+    </div>
+    <div class="col-9">
+        <div class="p-table-paginator-vehicles-container">
+            <div class="p-table-vehicles-container">
+                <p-table [value]="pageableVehicles?.content != undefined? pageableVehicles?.content: []"
+                    styleClass="vehicles-p-table">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Licence plate</th>
+                            <th>Brand</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-vehicle>
+                        <tr>
+                            <td>{{ vehicle.licencePlate }}</td>
+                            <td>{{ vehicle.brand }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+            <div class="p-paginator-vehicles-container">
+                <p-paginator (onPageChange)="pageChange($event)"
+                    [rows]="rows"
+                    [first]="pageableVehicles?.pageSize * pageableVehicles?.pageNumber"
+                    [totalRecords]="pageableVehicles?.totalNbElements != undefined? pageableVehicles?.totalNbElements: 0"
+                    [rowsPerPageOptions]="[5, 10, 20]"
+                    [showCurrentPageReport]="true"
+                    [currentPageReportTemplate] = "'{totalRecords} vehicles'">
+                </p-paginator>
+            </div>
+        </div>
+    </div>
+</div>

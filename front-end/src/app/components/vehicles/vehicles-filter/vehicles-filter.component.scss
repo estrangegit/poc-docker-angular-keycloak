@@ -1,0 +1,21 @@
+:host {
+    height: 100%;
+}
+
+i {
+    font-size: 3rem;
+}
+
+.brand-label-container {
+    text-align: right;
+}
+
+.vehicle-filter-p-panel-header h3 {
+    color: var(--gray-500);
+    font-weight: 300;
+}
+
+.vehicle-filter-p-panel-header hr {
+    border: none;
+    border-top: 1px solid var(--gray-200);
+}
